@@ -1,4 +1,4 @@
-export interface peopleInterface{
+export interface PeopleInterface{
     name?:string,
     height?:string,
     mass?:string,
