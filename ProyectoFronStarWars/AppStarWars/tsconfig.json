@@ -5,21 +5,12 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-<<<<<<< HEAD
     "downlevelIteration": true,
     "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-=======
-    "module": "es2015",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es5",
->>>>>>> eda25b8ea7734e4ddcefe4850db1b66293b8437f
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -27,12 +18,5 @@
       "es2018",
       "dom"
     ]
-<<<<<<< HEAD
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-=======
->>>>>>> eda25b8ea7734e4ddcefe4850db1b66293b8437f
   }
 }
