@@ -1,6 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+<<<<<<< HEAD
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+=======
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -41,6 +53,7 @@ import { ListFilmsComponent } from './components/list-films/list-films.component
   ],
   // injectamos nuestro servicio como providers
   providers: [DataApiService],
+>>>>>>> eda25b8ea7734e4ddcefe4850db1b66293b8437f
   bootstrap: [AppComponent]
 })
 export class AppModule { }
