@@ -26,7 +26,7 @@ export class DataApiService {
   }
  
   // "https://swapi.co/api/people/1/", 
-  getPeopleById(id: Int16Array){
+  getPeopleById(id: string){
     const url_api = "https://swapi.co/api/people/${id}";
     return (this.people = this.http.get(url_api));
   }
@@ -34,6 +34,12 @@ export class DataApiService {
   getAllFilms(){
     const url_api = "https://swapi.co/api/films";
     return this.http.get(url_api);
+  }
+  getFilmById(iepisode_id: string){
+    const url_api = "https://swapi.co/api/films/${episode_id}";
+    return (this.film = this.http.get(url_api));
+    
+
   }
 }
 
