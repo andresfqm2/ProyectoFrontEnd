@@ -11,12 +11,6 @@ export class DetailsPeopleComponent implements OnInit {
   constructor(private dataApi: DataApiService) { }
 
   ngOnInit() {
-    this.getPeopleById();
   }
-
-  getPeopleById(){
-    this.dataApi.getPeopleById.subscribe(peoples => console.log(peoples));
-  }
-
 }
 
