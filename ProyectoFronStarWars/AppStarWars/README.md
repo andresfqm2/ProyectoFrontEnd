@@ -1,10 +1,6 @@
 # AppStarWars
 
-<<<<<<< HEAD
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.6.
-=======
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
->>>>>>> eda25b8ea7734e4ddcefe4850db1b66293b8437f
 
 ## Development server
 
