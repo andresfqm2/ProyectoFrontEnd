@@ -15,7 +15,7 @@ export class DetailsPeopleComponent implements OnInit {
   }
 
   getPeopleById(){
-    this.dataApi.getAllPeople().subscribe(peoples => console.log(peoples));
+    this.dataApi.getPeopleById.subscribe(peoples => console.log(peoples));
   }
 
 }
