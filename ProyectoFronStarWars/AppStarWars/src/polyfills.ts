@@ -18,11 +18,6 @@
  * BROWSER POLYFILLS
  */
 
-<<<<<<< HEAD
-/** IE10 and IE11 requires the following for NgClass support on SVG elements */
-// import 'classlist.js';  // Run `npm install --save classlist.js`.
-
-=======
 /** IE9, IE10, IE11, and Chrome <55 requires all of the following polyfills.
  *  This also includes Android Emulators with older versions of Chrome and Google Search/Googlebot
  */
@@ -48,7 +43,6 @@
 /** IE10 and IE11 requires the following for the Reflect API. */
 // import 'core-js/es6/reflect';
 
->>>>>>> eda25b8ea7734e4ddcefe4850db1b66293b8437f
 /**
  * Web Animations `@angular/platform-browser/animations`
  * Only required if AnimationBuilder is used within the application and using IE/Edge or Safari.
@@ -71,11 +65,7 @@
  *
  * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame
  * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick
-<<<<<<< HEAD
- * (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames
-=======
  * (window as any).__zone_symbol__BLACK_LISTED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames
->>>>>>> eda25b8ea7734e4ddcefe4850db1b66293b8437f
  *
  *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js
  *  with the following flag, it will bypass `zone.js` patch for IE/Edge
