@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataApiService } from 'src/app/services/data-api.service';
+import { PlanetsInterface } from 'src/app/models/planets-interfaces';
 
 @Component({
   selector: 'app-planets',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanetsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private dataApi: DataApiService) { }
+  private planets: PlanetsInterface ={
+    name: '',
+    rotation_period: '',
+    orbital_period: '',
+    diameter: '', 
+    climate: '',
+    gravity: '',
+    terrain: '',
+    surface_water: '',
+    population: ''
+  }
   ngOnInit() {
+    this.getListPlanets();
+
+  }
+
+  getListPlanets(){
+    this.dataApi.getAllPlanets().subscribe((planets: PlanetsInterface) =>(this.planets = planets));
   }
 
 }
