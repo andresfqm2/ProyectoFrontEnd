@@ -25,8 +25,9 @@ export class DataApiService {
   return this.http.get(url_api);
   }
  
+  // "https://swapi.co/api/people/1/", 
   getPeopleById(id: string){
-    const url_api = `https://swapi.co/api/people/${id}`;
+    const url_api = "https://swapi.co/api/people/${id}";
     return (this.people = this.http.get(url_api));
   }
 
@@ -34,51 +35,11 @@ export class DataApiService {
     const url_api = "https://swapi.co/api/films";
     return this.http.get(url_api);
   }
-  getFilmById(episode_id: string){
-    const url_api = `https://swapi.co/api/films/${episode_id}`;
+  getFilmById(iepisode_id: string){
+    const url_api = "https://swapi.co/api/films/${episode_id}";
     return (this.film = this.http.get(url_api));
     
 
   }
-  getAllPlanets(){
-    const url_api = "https://swapi.co/api/planets";
-  return this.http.get(url_api);
-  }
- 
-  getPlanetsById(id: string){
-    const url_api = `https://swapi.co/api/planets/${id}`;
-    return (this.people = this.http.get(url_api));
-  }
-
-  getAllSpecies(){
-    const url_api = "https://swapi.co/api/species";
-  return this.http.get(url_api);
-  }
- 
-  getSpeciesById(id: string){
-    const url_api = `https://swapi.co/api/species/${id}`;
-    return (this.people = this.http.get(url_api));
-  }
-
-  getAllVehicles(){
-    const url_api = "https://swapi.co/api/vehicles";
-  return this.http.get(url_api);
-  }
- 
-  getVehiclesById(id: string){
-    const url_api = `https://swapi.co/api/vehicles/${id}`;
-    return (this.people = this.http.get(url_api));
-  }
-
-  getAllStarships(){
-    const url_api = "https://swapi.co/api/starships";
-  return this.http.get(url_api);
-  }
- 
-  getStarshipsById(id: string){
-    const url_api = `https://swapi.co/api/starships/${id}`;
-    return (this.people = this.http.get(url_api));
-  }
-
 }
 

@@ -1,21 +1,21 @@
 <section id="films">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let fil of films.planets">
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <div class="card_book">
             <div class="card">
                 <div class="card-body">
                     <p>
                       <img src="https://dummyimage.com/300x300/000/fff" alt="">
                     </p>
+                    <h4 routerLink="/films/{{film.episode_id}}" class="card-title">{{film.title}}</h4>
                     <p class="card-text">
-                        {{film.title}}
+                     {{film.opening_crawl}}
                     </p>
                   </div>
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   </section>

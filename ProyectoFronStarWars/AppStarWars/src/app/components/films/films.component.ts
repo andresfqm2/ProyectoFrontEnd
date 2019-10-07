@@ -25,25 +25,7 @@ export class FilmsComponent implements OnInit {
 
   ngOnInit() {
     const films_id = this.route.snapshot.params["episode_id"];
-    let id_films;
-
-    if(films_id =="4"){
-     id_films = "1";
-    }else if(films_id =="2"){
-      id_films = "5";
-    }else if(films_id =="1"){
-      id_films = "4";
-    }else if(films_id =="3"){
-      id_films = "6";
-    }else if(films_id =="6"){
-      id_films = "3";
-    }else if(films_id =="5"){
-      id_films = "2";
-    }else if(films_id =="7"){
-      id_films = "7";
-    }
-
-    this.getDetailsFilms(id_films);
+    this.getDetailsFilms(films_id);
   }
 
   getDetailsFilms(episode_id: string){
