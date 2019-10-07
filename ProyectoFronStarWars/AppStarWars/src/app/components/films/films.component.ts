@@ -3,6 +3,7 @@ import { DataApiService } from 'src/app/services/data-api.service';
 import { FilmInterface } from 'src/app/models/film-interface';
 // Importamos ActivatedRoute, Params para obtener los parametros que vienen por url
 import {ActivatedRoute, Params} from '@angular/router';
+import { PeopleInterface } from 'src/app/models/people-interface';
 
 @Component({
   selector: 'app-films',
@@ -12,7 +13,7 @@ import {ActivatedRoute, Params} from '@angular/router';
 export class FilmsComponent implements OnInit {
 
   constructor(private dataApi: DataApiService, private route: ActivatedRoute) { }
-
+  private people: PeopleInterface;
   private films: FilmInterface = {
     title : '',
     episode_id: '',
@@ -25,11 +26,35 @@ export class FilmsComponent implements OnInit {
 
   ngOnInit() {
     const films_id = this.route.snapshot.params["episode_id"];
-    this.getDetailsFilms(films_id);
+    let id_films;
+    this.getListPeoples();
+
+    if(films_id =="4"){
+     id_films = "1";
+    }else if(films_id =="2"){
+      id_films = "5";
+    }else if(films_id =="1"){
+      id_films = "4";
+    }else if(films_id =="3"){
+      id_films = "6";
+    }else if(films_id =="6"){
+      id_films = "3";
+    }else if(films_id =="5"){
+      id_films = "2";
+    }else if(films_id =="7"){
+      id_films = "7";
+    }
+
+    this.getDetailsFilms(id_films);    
+      
   }
 
   getDetailsFilms(episode_id: string){
     this.dataApi.getFilmById(episode_id).subscribe(films => (this.films = films));
+  }
+
+  getListPeoples() {
+    this.dataApi.getAllPeople().subscribe((peoples: PeopleInterface)=>(this.people = peoples)) ;
   }
 
 }

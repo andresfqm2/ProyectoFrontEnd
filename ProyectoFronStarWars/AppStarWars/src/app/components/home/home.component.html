@@ -1,3 +1,11 @@
+<div class="jumbotron">
+  <h2 class="display-4">App of Star Wars!</h2>
+  <p class="lead">Wellcome to the fun!!!</p>  
+  <hr class="my-4">
+  <p>You will find related information of all movies, characters, spaceships, species and vehicles of Star Wars. We hope you learn a lot</p>   
+  <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+</div>
+
 <section id="films">
   <div class="container">
     <div class="row">
@@ -7,11 +15,13 @@
               <div class="card-body">
                   <p>
                     <img src="https://dummyimage.com/300x300/000/fff" alt="">
+                    
                   </p>
-                  <h4 routerLink="/films/{{film.episode_id}}" class="card-title">{{film.title}}</h4>
-                  <p class="card-text">
+                  <h4 class="card-title">{{film.title}}</h4>                                   
+                 <!-- <p class="card-text">
                    {{film.opening_crawl}}
-                  </p>
+                  </p>-->
+                  <a routerLink="/films/{{film.episode_id}}" class="btn btn-primary">Ver descripción</a>
                 </div>
           </div>
         </div>

@@ -11,15 +11,15 @@ export class HomeComponent implements OnInit {
 
   constructor(private dataApi: DataApiService) { }
   private films: FilmInterface;
+  
 
-  ngOnInit() {
-    this.getListPeoples();
+  ngOnInit() {    
     this.getListFilms();
   }
-  getListPeoples() {
+ /* getListPeoples() {
     this.dataApi.getAllPeople().subscribe(peoples => console.log(peoples));
-  }
-
+  }*/
+  
   getListFilms(){
     this.dataApi.getAllFilms().subscribe((films: FilmInterface) =>(this.films = films));
   }

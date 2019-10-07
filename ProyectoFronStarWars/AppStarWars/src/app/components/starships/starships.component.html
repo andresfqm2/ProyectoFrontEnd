@@ -1,3 +1,39 @@
-<p>
-  starships works!
-</p>
+<div class="jumbotron">
+    <h2 class="display-4">App of Star Wars!</h2>
+    <p class="lead">Wellcome to the fun!!!</p>  
+    <hr class="my-4">
+    <p>Here you will find all the models of the galactic ships, enjoy it</p>     
+    <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+  </div>
+
+<section id="films">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let starShip of starShips.results">
+          <div class="card_book">
+            <div class="card">
+                <div class="card-body">
+                    <p>
+                      <img src="https://dummyimage.com/300x300/000/fff" alt="">
+                      
+                    </p>
+                    <h4 class="card-title">Name: {{starShip.name}}</h4>
+                    <p class="card-text"><b>Model: </b>{{starShip.model}}</p>
+                    <p class="card-text"><b>Starship class: </b>{{starShip.starship_class}}</p>
+                    <p class="card-text"><b>Cargo capacity: </b>{{starShip.cargo_capacity}}</p>
+                    <p class="card-text"><b>MGLT: </b>{{starShip.MGLT}}</p>
+                    <p class="card-text"><b>Cost in credits</b>{{starShip.cost_in_credits}}</p>
+                    <p class="card-text"><b>Length: </b>{{starShip.length}}</p>
+                    <p class="card-text"><b>Manufacturer: </b>{{starShip.manufacturer}}</p>
+                    <p class="card-text"><b>Max atmosphering speed: </b>{{starShip.max_atmosphering_speed}}</p>
+                    <p class="card-text"><b>Passengers: </b>{{starShip.passengers}}</p>                    
+                    <!--<a routerLink="/films/{{film.episode_id}}" class="btn btn-primary">Ver mas</a>-->
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  

@@ -1,3 +1,39 @@
-<p>
-  vehicles works!
-</p>
+<div class="jumbotron">
+    <h2 class="display-4">App of Star Wars!</h2>
+    <p class="lead">Wellcome to the fun!!!</p>  
+    <hr class="my-4">
+    <p>It's not just ships, there are also vehicles in this universe, discover them</p>     
+    <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+  </div>
+
+<section id="films">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let vehicle of vehicles.results">
+          <div class="card_book">
+            <div class="card">
+                <div class="card-body">
+                    <p>
+                      <img src="https://dummyimage.com/300x300/000/fff" alt="">
+                      
+                    </p>
+                    <h4 class="card-title">Name: {{vehicle.name}}</h4>
+                    <p class="card-text"><b>Vehicle class: </b>{{vehicle.vehicle_class}}</p>
+                    <p class="card-text"><b>Passengers: </b>{{vehicle.passengers}}</p>
+                    <p class="card-text"><b>Model: </b>{{vehicle.model}}</p>
+                    <p class="card-text"><b>Max atmosphering speed: </b>{{vehicle.max_atmosphering_speed}}</p>
+                    <p class="card-text"><b>Manufacturer: </b>{{vehicle.manufacturer}}</p>
+                    <p class="card-text"><b>Length: </b>{{vehicle.length}}</p>
+                    <p class="card-text"><b>Crew: </b>{{vehicle.crew}}</p>
+                    <p class="card-text"><b>Consumables: </b>{{vehicle.consumables}}</p>
+                    <p class="card-text"><b>Cargo capacity: </b>{{vehicle.cargo_capacity}}</p>
+                    <!--<a routerLink="/films/{{film.episode_id}}" class="btn btn-primary">Ver mas</a>-->
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
