@@ -1,3 +1,11 @@
+<div class="jumbotron">
+    <h2 class="display-4">App of Star Wars!</h2>
+    <p class="lead">Wellcome to the fun!!!</p>  
+    <hr class="my-4">
+    <p>Detailed information of the planets that appear in the movies</p>     
+    <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+  </div>
+
 <section id="films">
     <div class="container">
       <div class="row">
@@ -9,11 +17,15 @@
                       <img src="https://dummyimage.com/300x300/000/fff" alt="">
                       
                     </p>
-                    <h4 class="card-title">{{planet.name}}</h4>
-                    <p class="card-text">
-         
-                    </p>
-                    <a routerLink="/films/{{film.episode_id}}" class="btn btn-primary">Ver mas</a>
+                    <h4 class="card-title"><b>Name Planet: </b> {{planet.name}}</h4>
+                    <p class="card-text"> <b>Rotation Period: </b>{{planet.rotation_period}}</p>
+                    <p class="card-text"> <b>Diameter</b>: {{planet.diameter}}</p>
+                    <p class="card-text"> <b>Climate: </b> {{planet.climate}}</p>
+                    <p class="card-text"> <b>Gravity: </b>{{planet.gravity}}</p>
+                    <p class="card-text"> <b>Terrain: </b>{{planet.terrain}}</p>
+                    <p class="card-text"> <b>Surface Water: </b>{{planet.surface_water}}</p>
+                    <p class="card-text"> <b>Population: </b>{{planet.population}}</p>
+                   <!-- <a routerLink="/films/{{film.episode_id}}" class="btn btn-primary">Ver mas</a>-->
                   </div>
             </div>
           </div>

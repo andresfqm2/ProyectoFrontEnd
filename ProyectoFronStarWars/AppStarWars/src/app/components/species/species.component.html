@@ -1,3 +1,12 @@
+<div class="jumbotron">
+    <h2 class="display-4">App of Star Wars!</h2>
+    <p class="lead">Wellcome to the fun!!!</p>  
+    <hr class="my-4">
+    <p>In the Star Wars universe we humans are not alone, there are also other races, other species, discover them.</p>     
+    <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+  </div>
+
+
 <section id="films">
     <div class="container">
       <div class="row">
@@ -10,10 +19,15 @@
                       
                     </p>
                     <h4 class="card-title">{{specie.name}}</h4>
-                    <p class="card-text">
-         
-                    </p>
-                    <a routerLink="/films/{{film.episode_id}}" class="btn btn-primary">Ver mas</a>
+                    <p class="card-text"><b>Classification: </b>{{specie.classification}}</p>
+                    <p class="card-text"><b>Language: </b>{{specie.language}}</p>
+                    <p class="card-text"><b>Skin colors: </b>{{specie.skin_colors}}</p>
+                    <p class="card-text"><b>Eye colors: </b>{{specie.eye_colors}}</p>
+                    <p class="card-text"><b>Hair colors: </b>{{specie.hair_colors}}</p>
+                    <p class="card-text"><b>Average lifespan: </b>{{specie.average_lifespan}}</p>
+                    <p class="card-text"><b>Average height: </b>{{specie.average_height}}</p>
+                    <p class="card-text"><b>Designation: </b>{{specie.designation}}</p>                  
+                    <!--<a routerLink="/films/{{film.episode_id}}" class="btn btn-primary">Ver mas</a>-->
                   </div>
             </div>
           </div>
