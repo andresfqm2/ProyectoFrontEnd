@@ -12,20 +12,20 @@ import { ListFilmsComponent } from './components/list-films/list-films.component
 
 // Ruteamos nuestras rutas
 const routes: Routes = [
-  {path: "", component: HomeComponent},
-  {path: "people", component: DetailsPeopleComponent},
-  {path: "people/:id", component: DetailsPeopleComponent},
-  {path: "planets", component: PlanetsComponent},
-  {path: "planets/:id", component: PlanetsComponent},
-  {path: "films/:episode_id", component: FilmsComponent},
-  {path: "listFilms", component: ListFilmsComponent},
-  {path: "species", component: SpeciesComponent},
-  {path: "species/:id", component: SpeciesComponent},
-  {path: "vehicles", component: VehiclesComponent},
-  {path: "vehicles/:id", component: VehiclesComponent},
-  {path: "startships", component: StarshipsComponent},
-  {path: "startships/:id", component: StarshipsComponent},
-  {path: "**", component: Page404Component}
+  {path: '', component: HomeComponent},
+  {path: 'people', component: DetailsPeopleComponent},
+  {path: 'people/:id', component: DetailsPeopleComponent},
+  {path: 'planets', component: PlanetsComponent},
+  {path: 'planets/:id', component: PlanetsComponent},
+  {path: 'films/:episode_id', component: FilmsComponent},
+  {path: 'listFilms', component: ListFilmsComponent},
+  {path: 'species', component: SpeciesComponent},
+  {path: 'species/:id', component: SpeciesComponent},
+  {path: 'vehicles', component: VehiclesComponent},
+  {path: 'vehicles/:id', component: VehiclesComponent},
+  {path: 'startships', component: StarshipsComponent},
+  {path: 'startships/:id', component: StarshipsComponent},
+  {path: '**', component: Page404Component}
 ];
 
 @NgModule({

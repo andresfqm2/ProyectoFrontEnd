@@ -11,24 +11,23 @@ export class DetailsPeopleComponent implements OnInit {
 
   constructor(private dataApi: DataApiService) { }
 
-  private people: PeopleInterface ={
+  private people: PeopleInterface = {
     name: '',
     height: '',
     mass: '',
     hair_color: '',
     skin_color: '',
     eye_color: '',
-    birth_year: '', 
+    birth_year: '',
     gender: ''
-    
-  }
+  };
   ngOnInit() {
     this.getListPeoples();
 
   }
 
-  getListPeoples(){
-    this.dataApi.getAllPeople().subscribe((people: PeopleInterface) =>(this.people = people));
+  getListPeoples() {
+    this.dataApi.getAllPeople().subscribe((people: PeopleInterface) => (this.people = people));
   }
 
 

@@ -37,7 +37,7 @@ import { ListFilmsComponent } from './components/list-films/list-films.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     HttpClientModule
   ],
   // injectamos nuestro servicio como providers

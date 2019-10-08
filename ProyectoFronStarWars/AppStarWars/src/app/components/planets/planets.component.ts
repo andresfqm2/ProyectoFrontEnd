@@ -10,24 +10,28 @@ import { PlanetsInterface } from 'src/app/models/planets-interfaces';
 export class PlanetsComponent implements OnInit {
 
   constructor(private dataApi: DataApiService) { }
-  private planets: PlanetsInterface ={
+  private planets: PlanetsInterface = {
     name: '',
     rotation_period: '',
     orbital_period: '',
-    diameter: '', 
+    diameter: '',
     climate: '',
     gravity: '',
     terrain: '',
     surface_water: '',
-    population: ''
-  }
+    population: '',
+    residents: [],
+    created: '',
+    edited: '',
+    URL: '',
+  };
   ngOnInit() {
     this.getListPlanets();
 
   }
 
-  getListPlanets(){
-    this.dataApi.getAllPlanets().subscribe((planets: PlanetsInterface) =>(this.planets = planets));
+  getListPlanets() {
+    this.dataApi.getAllPlanets().subscribe((planets: PlanetsInterface) => (this.planets = planets));
   }
 
 }
