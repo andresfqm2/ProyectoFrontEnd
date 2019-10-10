@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataApiService } from 'src/app/services/data-api.service';
 import { PeopleInterface } from 'src/app/models/people-interface';
+import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
   selector: 'app-details-people',
@@ -9,7 +10,7 @@ import { PeopleInterface } from 'src/app/models/people-interface';
 })
 export class DetailsPeopleComponent implements OnInit {
 
-  constructor(private dataApi: DataApiService) { }
+  constructor(private dataApi: DataApiService, private route: ActivatedRoute) { }
 
   private people: PeopleInterface = {
     name: '',
@@ -22,12 +23,18 @@ export class DetailsPeopleComponent implements OnInit {
     gender: ''
   };
   ngOnInit() {
-    this.getListPeoples();
+  this.getPeopleForFilms("https://swapi.co/api/people/3/");
+
 
   }
 
   getListPeoples() {
     this.dataApi.getAllPeople().subscribe((people: PeopleInterface) => (this.people = people));
+  }
+
+  getPeopleForFilms(url: string){
+    // this.dataApi.getCharactersForFilms(url).subscribe(people => console.log(people));
+    this.dataApi.getCharactersForFilms(url).subscribe(people => console.log(people));
   }
 
 

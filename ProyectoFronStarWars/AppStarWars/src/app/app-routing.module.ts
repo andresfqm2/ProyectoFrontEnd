@@ -18,6 +18,7 @@ const routes: Routes = [
   {path: 'planets', component: PlanetsComponent},
   {path: 'planets/:id', component: PlanetsComponent},
   {path: 'films/:episode_id', component: FilmsComponent},
+  {path: 'films/:name', component: FilmsComponent},
   {path: 'listFilms', component: ListFilmsComponent},
   {path: 'species', component: SpeciesComponent},
   {path: 'species/:id', component: SpeciesComponent},

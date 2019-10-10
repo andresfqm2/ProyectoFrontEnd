@@ -13,19 +13,30 @@ import { PeopleInterface } from 'src/app/models/people-interface';
 export class FilmsComponent implements OnInit {
 
   constructor(private dataApi: DataApiService, private route: ActivatedRoute) { }
-  private people: PeopleInterface;
+  private peopleFilms: PeopleInterface ={
+    name: '',
+    height: '',
+    mass: '',
+    hair_color: '',
+    skin_color: '',
+    eye_color: '',
+    birth_year: '',
+    gender: ''
+  };
   private films: FilmInterface = {
     title : '',
     episode_id: '',
     opening_crawl: '',
     director: '',
     producer: '',
-    release_date: ''
-  }
+    release_date: '' 
+  };
 
 
   ngOnInit() {
     const films_id = this.route.snapshot.params["episode_id"];
+
+    //const url = this.route.snapshot.params["url"];
     let id_films;
     this.getListPeoples();
 
@@ -45,16 +56,28 @@ export class FilmsComponent implements OnInit {
       id_films = "7";
     }
 
-    this.getDetailsFilms(id_films);    
-      
+    this.getDetailsFilms(id_films);   
+
+          
   }
 
   getDetailsFilms(episode_id: string){
     this.dataApi.getFilmById(episode_id).subscribe(films => (this.films = films));
+    let characters: any[] = [this.dataApi.getFilmById(episode_id).subscribe(films =>console.log(films))];
+   
+    console.log(characters);
+
+    //this.getListPeoplesForFilms("https://swapi.co/api/people/3");
+     // this.dataApi.getCharactersForFilms(url).subscribe(people => console.log(people));
   }
 
   getListPeoples() {
-    this.dataApi.getAllPeople().subscribe((peoples: PeopleInterface)=>(this.people = peoples)) ;
+    //this.dataApi.getAllPeople().subscribe((peoples: PeopleInterface)=>(this.people = peoples)) ;
+  }
+
+  getListPeoplesForFilms(name: string){
+    this.dataApi.getCharactersForFilms(name).subscribe(peopleFilms => (this.peopleFilms = peopleFilms));
+
   }
 
 }

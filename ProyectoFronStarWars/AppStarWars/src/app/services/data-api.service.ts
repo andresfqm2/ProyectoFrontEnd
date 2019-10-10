@@ -73,5 +73,10 @@ export class DataApiService {
     return (this.people = this.http.get(url_api));
   }
 
+  getCharactersForFilms(url: string){
+  const url_api = `${url}`;
+  return (this.people = this.http.get(url_api));
+  }
+
 }
 
