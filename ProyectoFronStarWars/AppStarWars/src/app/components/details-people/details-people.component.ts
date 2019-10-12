@@ -23,7 +23,8 @@ export class DetailsPeopleComponent implements OnInit {
     gender: ''
   };
   ngOnInit() {
-  this.getPeopleForFilms("https://swapi.co/api/people/3/");
+  //this.getPeopleForFilms("https://swapi.co/api/people/3/");
+  this.getListPeoples();
 
 
   }
