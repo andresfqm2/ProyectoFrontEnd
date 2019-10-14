@@ -21,11 +21,20 @@
           <div class="card_book">
             <div class="card">
                 <div class="card-body">
-                    <p>
-                      <img src="https://dummyimage.com/300x300/000/fff" alt="">
-                      
-                    </p>
-                    <h4 class="card-title">{{specie.name}}</h4>
+                    
+                    <div [ngSwitch]="specie.name">
+                        <p *ngSwitchCase="'Hutt'"><img src='/assets/img/species/Hutt.jpg'></p>
+                        <p *ngSwitchCase="'Trandoshan'"><img src='/assets/img/species/Trandoshan.jpg'></p>
+                        <p *ngSwitchCase="'Mon Calamari'"><img src='/assets/img/species/MonCalamari.jpg'></p>
+                        <p *ngSwitchCase="'Ewok'"><img src='/assets/img/species/Ewok.jpg'></p>
+                        <p *ngSwitchCase="'Sullustan'"><img src='/assets/img/species/Sullustan.jpg'></p>
+                        <p *ngSwitchCase="'Neimodian'"><img src='/assets/img/species/Neimodian.jpg'></p>
+                        <p *ngSwitchCase="'Gungan'"><img src='/assets/img/species/Gungan.jpg'></p>
+                        <p *ngSwitchCase="'Toydarian'"><img src='/assets/img/species/Toydarian.jpg'></p>
+                        <p *ngSwitchCase="'Dug'"><img src='/assets/img/species/Dug.jpg'></p>
+                        <p *ngSwitchDefault>No es ningún estado conocido</p>
+                    </div>
+                    <h4 class="card-title"><b>Name: </b>{{specie.name}}</h4>
                     <p class="card-text"><b>Classification: </b>{{specie.classification}}</p>
                     <p class="card-text"><b>Language: </b>{{specie.language}}</p>
                     <p class="card-text"><b>Skin colors: </b>{{specie.skin_colors}}</p>

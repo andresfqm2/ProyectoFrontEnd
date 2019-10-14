@@ -12,25 +12,34 @@
   </div>
 </div>
 
-<section id="films">
+<section id="people">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let people of people.results">
           <div class="card_book">
             <div class="card">
                 <div class="card-body">
-                    <p>
-                      <img src="https://dummyimage.com/300x300/000/fff" alt="">
-                      
-                    </p>
-                    <h4 class="card-title">{{people.name}}</h4>
-                    <h4 class="card-title">{{people.height}}</h4>
-                    <h4 class="card-title">{{people.mass}}</h4>
-                    <h4 class="card-title">{{people.hair_color}}</h4>
-                    <h4 class="card-title">{{people.skin_color}}</h4>
-                    <h4 class="card-title">{{people.eye_color}}</h4>
-                    <h4 class="card-title">{{people.birth_year}}</h4>
-                    <h4 class="card-title">{{people.gender}}</h4>
+                    <div [ngSwitch]="people.name">
+                        <p *ngSwitchCase="'Luke Skywalker'"><img src='/assets/img/people/LukeSkywalker.jpg'></p>
+                        <p *ngSwitchCase="'C-3PO'"><img src='/assets/img/people/C_3PO.jpg'></p>
+                        <p *ngSwitchCase="'R2-D2'"><img src='/assets/img/people/R2_D2.jpg'></p>
+                        <p *ngSwitchCase="'Darth Vader'"><img src='/assets/img/people/DarthVader.jpg'></p>
+                        <p *ngSwitchCase="'Leia Organa'"><img src='/assets/img/people/LeiaOrgana.jpg'></p>
+                        <p *ngSwitchCase="'Owen Lars'"><img src='/assets/img/people/OwenLars.jpg'></p>
+                        <p *ngSwitchCase="'Beru Whitesun lars'"><img src='/assets/img/people/BeruWhitesunlars.jpg'></p>
+                        <p *ngSwitchCase="'R5-D4'"><img src='/assets/img/people/R5_D4.jpg'></p>
+                        <p *ngSwitchCase="'Biggs Darklighter'"><img src='/assets/img/people/BiggsDarklighter.jpg'></p>
+                        <p *ngSwitchCase="'Obi-Wan Kenobi'"><img src='/assets/img/people/Obi_WanKenobi.jpg'></p>
+                        <p *ngSwitchDefault>No es ningún estado conocido</p>
+                    </div>
+                    <h4 class="card-title"><b>Name: </b> {{people.name}}</h4>
+                    <p class="card-title"><b>Height: </b> {{people.height}}</p>
+                    <p class="card-title"><b>Mass: </b> {{people.mass}}</p>
+                    <p class="card-title"><b>Hair Color: </b> {{people.hair_color}}</p>
+                    <p class="card-title"><b>Skin Color: </b> {{people.skin_color}}</p>
+                    <p class="card-title"><b>Eyes Color: </b> {{people.eye_color}}</p>
+                    <p class="card-title"><b>Birthday: </b> {{people.birth_year}}</p>
+                    <p class="card-title"><b>Gender: </b> {{people.gender}}</p>
                    
                     <p class="card-text">      
                     </p>

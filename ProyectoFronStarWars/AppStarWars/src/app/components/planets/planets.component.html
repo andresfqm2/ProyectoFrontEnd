@@ -1,47 +1,57 @@
 <div class="jumbotron">
-  <!--
-    <h2 class="display-4">App of Star Wars!</h2>
-    <p class="lead">Wellcome to the fun!!!</p>  
-    <hr class="my-4">
-    <p>Detailed information of the planets that appear in the movies</p>     
-    -->
-    <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
-
-    <div>
-        <img src="/assets/images/planetas.jpg" alt="" class="planetas">
-      </div>
-  </div>
-<section id="films">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let planet of planets.results">
-          <div class="card_book">
-            <div class="card">
-                <div class="card-body">
-                    <p>
-                      <img src="https://dummyimage.com/300x300/000/fff" alt="">
+    <!--
+      <h2 class="display-4">App of Star Wars!</h2>
+      <p class="lead">Wellcome to the fun!!!</p>  
+      <hr class="my-4">
+      <p>Detailed information of the planets that appear in the movies</p>     
+      -->
+      <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+  
+      <div>
+          <img src="/assets/images/planetas.jpg" alt="" class="planetas">
+        </div>
+    </div>
+  <section id="planets">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let planet of planets.results">
+            <div class="card_book">
+              <div class="card">
+                  <div class="card-body">
+                     
+                          <div [ngSwitch]="planet.name">
+                              <p *ngSwitchCase="'Alderaan'"><img src='/assets/img/planets/Alderaan.jpg'></p>
+                              <p *ngSwitchCase="'Naboo'"><img src='/assets/img/planets/Naboo.jpg'></p>
+                              <p *ngSwitchCase="'Yavin IV'"><img src='/assets/img/planets/YavinIV.jpg'></p>
+                              <p *ngSwitchCase="'Hoth'"><img src='/assets/img/planets/Hoth.jpg'></p>
+                              <p *ngSwitchCase="'Dagobah'"><img src='/assets/img/planets/Dagobah.jpg'></p>
+                              <p *ngSwitchCase="'Bespin'"><img src='/assets/img/planets/Bespin.jpg'></p>
+                              <p *ngSwitchCase="'Endor'"><img src='/assets/img/planets/Endor.jpg'></p>
+                              <p *ngSwitchCase="'Coruscant'"><img src='/assets/img/planets/Coruscant.jpg'></p>
+							                <p *ngSwitchCase="'Kamino'"><img src='/assets/img/planets/Kamino.jpg'></p>
+							                <p *ngSwitchCase="'Geonosis'"><img src='/assets/img/planets/Geonosis.jpg'></p>
+                              <p *ngSwitchDefault>No es ningún estado conocido</p>
+                          </div>
+                        
                       
-                    </p>
-                    <h4 class="card-title"><b>Name Planet: </b> {{planet.name}}</h4>
-                    <p class="card-text"> <b>Rotation Period: </b>{{planet.rotation_period}}</p>
-                    <p class="card-text"> <b>Diameter</b>: {{planet.diameter}}</p>
-                    <p class="card-text"> <b>Climate: </b> {{planet.climate}}</p>
-                    <p class="card-text"> <b>Gravity: </b>{{planet.gravity}}</p>
-                    <p class="card-text"> <b>Terrain: </b>{{planet.terrain}}</p>
-                    <p class="card-text"> <b>Surface Water: </b>{{planet.surface_water}}</p>
-                    <p class="card-text"> <b>Population: </b>{{planet.population}}</p>
-                    <p class="card-text"> <b>Residents: </b>{{planet.residents}}</p>
-                    <p class="card-text"> <b>Films: </b>{{planet.films}}</p>
-                    <p class="card-text"> <b>Created: </b>{{planet.created}}</p>
-                    <p class="card-text"> <b>Edited: </b>{{planet.edited}}</p>
-                    <p class="card-text"> <b>URL: </b>{{planet.url}}</p>
-                   <!-- <a routerLink="/films/{{film.episode_id}}" class="btn btn-primary">Ver mas</a>-->
-                  </div>
+                      <!-- Dado la variable var estado = 1-->
+
+
+                      <h4 class="card-title"><b>Name Planet: </b> {{planet.name}}</h4>
+                      <p class="card-text"> <b>Rotation Period: </b>{{planet.rotation_period}}</p>
+                      <p class="card-text"> <b>Diameter</b>: {{planet.diameter}}</p>
+                      <p class="card-text"> <b>Climate: </b> {{planet.climate}}</p>
+                      <p class="card-text"> <b>Gravity: </b>{{planet.gravity}}</p>
+                      <p class="card-text"> <b>Terrain: </b>{{planet.terrain}}</p>
+                      <p class="card-text"> <b>Surface Water: </b>{{planet.surface_water}}</p>
+                      <p class="card-text"> <b>Population: </b>{{planet.population}}</p>
+                      <p class="card-text"> <b>Created: </b>{{planet.created}}</p>
+                      <p class="card-text"> <b>Edited: </b>{{planet.edited}}</p>
+                     <!-- <a routerLink="/films/{{film.episode_id}}" class="btn btn-primary">Ver mas</a>-->
+                    </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  
-  
+    </section>  
