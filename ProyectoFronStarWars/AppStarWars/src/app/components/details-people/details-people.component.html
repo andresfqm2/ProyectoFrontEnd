@@ -20,16 +20,16 @@
             <div class="card">
                 <div class="card-body">
                     <div [ngSwitch]="people.name">
-                        <p *ngSwitchCase="'Luke Skywalker'"><img src='/assets/img/people/LukeSkywalker.jpg'></p>
-                        <p *ngSwitchCase="'C-3PO'"><img src='/assets/img/people/C_3PO.jpg'></p>
-                        <p *ngSwitchCase="'R2-D2'"><img src='/assets/img/people/R2_D2.jpg'></p>
-                        <p *ngSwitchCase="'Darth Vader'"><img src='/assets/img/people/DarthVader.jpg'></p>
-                        <p *ngSwitchCase="'Leia Organa'"><img src='/assets/img/people/LeiaOrgana.jpg'></p>
-                        <p *ngSwitchCase="'Owen Lars'"><img src='/assets/img/people/OwenLars.jpg'></p>
-                        <p *ngSwitchCase="'Beru Whitesun lars'"><img src='/assets/img/people/BeruWhitesunlars.jpg'></p>
-                        <p *ngSwitchCase="'R5-D4'"><img src='/assets/img/people/R5_D4.jpg'></p>
-                        <p *ngSwitchCase="'Biggs Darklighter'"><img src='/assets/img/people/BiggsDarklighter.jpg'></p>
-                        <p *ngSwitchCase="'Obi-Wan Kenobi'"><img src='/assets/img/people/Obi_WanKenobi.jpg'></p>
+                        <p *ngSwitchCase="'Luke Skywalker'"><img src='/assets/img/people/LukeSkywalker.jpg'alt="" class="films"></p>
+                        <p *ngSwitchCase="'C-3PO'"><img src='/assets/img/people/C_3PO.jpg'alt="" class="films"></p>
+                        <p *ngSwitchCase="'R2-D2'"><img src='/assets/img/people/R2_D2.jpg'alt="" class="films"></p>
+                        <p *ngSwitchCase="'Darth Vader'"><img src='/assets/img/people/DarthVader.jpg'alt="" class="films"></p>
+                        <p *ngSwitchCase="'Leia Organa'"><img src='/assets/img/people/LeiaOrgana.jpg'alt="" class="films"></p>
+                        <p *ngSwitchCase="'Owen Lars'"><img src='/assets/img/people/OwenLars.jpg'alt="" class="films"></p>
+                        <p *ngSwitchCase="'Beru Whitesun lars'"><img src='/assets/img/people/BeruWhitesunlars.jpg'alt="" class="films"></p>
+                        <p *ngSwitchCase="'R5-D4'"><img src='/assets/img/people/R5_D4.jpg'alt="" class="films"></p>
+                        <p *ngSwitchCase="'Biggs Darklighter'"><img src='/assets/img/people/BiggsDarklighter.jpg'alt="" class="films"></p>
+                        <p *ngSwitchCase="'Obi-Wan Kenobi'"><img src='/assets/img/people/Obi_WanKenobi.jpg'alt="" class="films"></p>
                         <p *ngSwitchDefault>No es ningún estado conocido</p>
                     </div>
                     <h4 class="card-title"><b>Name: </b> {{people.name}}</h4>

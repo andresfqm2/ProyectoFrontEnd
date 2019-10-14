@@ -19,10 +19,18 @@
         <div class="card_book">
           <div class="card">
               <div class="card-body">
-                  <p>
-                    <img src="https://dummyimage.com/300x300/000/fff" alt="">
-                    
-                  </p>
+                    <!--<img src="/assets/imagFilms/Films1.jpg" alt="" class="Films">
+                    <img src="/assets/imagFilms/Films2.jpg" alt="" class="Films">-->
+
+                    <div [ngSwitch]="film.title">
+                      <p *ngSwitchCase="'A New Hope'"><img src="/assets/imagFilms/Films1.jpg" alt="" class="films"></p>
+                      <p *ngSwitchCase="'Attack of the Clones'"><img src="/assets/imagFilms/Films2.jpg" alt="" class="films"></p>
+                      <p *ngSwitchCase="'The Phantom Menace'"><img src="/assets/imagFilms/Films3.jpg" alt="" class="films"></p>
+                      <p *ngSwitchCase="'Revenge of the Sith'"><img src="/assets/imagFilms/Films4.jpg" alt="" class="films"></p>
+                      <p *ngSwitchCase="'Return of the Jedi'"><img src="/assets/imagFilms/Films5.jpg" alt="" class="films"></p>
+                      <p *ngSwitchCase="'The Empire Strikes Back'"><img src="/assets/imagFilms/Films6.jpg" alt="" class="films"></p>
+                      <p *ngSwitchCase="'The Force Awakens'"><img src="/assets/imagFilms/Films7.jpg" alt="" class="films"></p>
+                    </div>
                   <h4 class="card-title">{{film.title}}</h4>                                   
                  <!-- <p class="card-text">
                    {{film.opening_crawl}}
