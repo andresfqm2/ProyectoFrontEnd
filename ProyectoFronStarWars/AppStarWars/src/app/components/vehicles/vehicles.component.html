@@ -9,6 +9,7 @@
 
     <div>
         <img src="/assets/images/vehiculos.jpg" alt="" class="vehiculos">
+        <p>It's not just ships, there are also vehicles in this universe, discover them</p>  
       </div>
   </div>
 
@@ -19,9 +20,18 @@
           <div class="card_book">
             <div class="card">
                 <div class="card-body">
-                    <p>
-                      <img src="https://dummyimage.com/250x250/000/fff" alt="">
-                    </p>
+                  <div [ngSwitch]="vehicle.name">
+                    <p *ngSwitchCase="'Sand Crawler'"><img src='/assets/img/vehiculos/Sand Crawler.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'T-16 skyhopper'"><img src='/assets/img/vehiculos/skyhopper.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'X-34 landspeeder'"><img src='/assets/img/vehiculos/landspeeder.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'TIE/LN starfighter'"><img src='/assets/img/vehiculos/starfighter.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'Snowspeeder'"><img src='/assets/img/vehiculos/Snowspeeder.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'TIE bomber'"><img src='/assets/img/vehiculos/TIE bomber.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'AT-AT'"><img src='/assets/img/vehiculos/AT-AT.png'alt="" class="films"></p>
+                    <p *ngSwitchCase="'AT-ST'"><img src='/assets/img/vehiculos/AT-ST.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'Storm IV Twin-Pod cloud car'"><img src='/assets/img/vehiculos/storm.png'alt="" class="films"></p>
+                    <p *ngSwitchCase="'Sail barge'"><img src='/assets/img/vehiculos/Sail barge.jpg'alt="" class="films"></p>
+                   </div>
                     <h4 class="card-title">Name: {{vehicle.name}}</h4>
                     <p class="card-text"><b>Vehicle class: </b>{{vehicle.vehicle_class}}</p>
                     <p class="card-text"><b>Passengers: </b>{{vehicle.passengers}}</p>
