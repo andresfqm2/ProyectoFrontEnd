@@ -16,12 +16,20 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let starShip of starShips.results">
           <div class="card_book">
-            <div class="card">
+              <div class="card text-white bg-dark mb-3" style="max-width:100%">
                 <div class="card-body">
-                    <p>
-                      <img src="https://dummyimage.com/300x300/000/fff" alt="">
-                      
-                    </p>
+                  <div [ngSwitch]="starShip.name">
+                    <p *ngSwitchCase="'Executor'"><img src='/assets/img/startships/executor.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'Sentinel-class landing craft'"><img src='/assets/img/startships/landing_craft.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'Death Star'"><img src='/assets/img/startships/Death_Star.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'Millennium Falcon'"><img src='/assets/img/startships/Millennium-Falcon.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'Y-wing'"><img src='/assets/img/startships/Y-wing.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'X-wing'"><img src='/assets/img/startships/X-wing.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'TIE Advanced x1'"><img src='/assets/img/startships/TIE_Advanced.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'Slave 1'"><img src='/assets/img/startships/Slave.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'Imperial shuttle'"><img src='/assets/img/startships/Imperial_shuttle.jpg'alt="" class="films"></p>
+                    <p *ngSwitchCase="'EF76 Nebulon-B escort frigate'"><img src='/assets/img/startships/escort_frigate.jpg'alt="" class="films"></p>
+                   </div>   
                     <h4 class="card-title">Name: {{starShip.name}}</h4>
                     <p class="card-text"><b>Model: </b>{{starShip.model}}</p>
                     <p class="card-text"><b>Starship class: </b>{{starShip.starship_class}}</p>

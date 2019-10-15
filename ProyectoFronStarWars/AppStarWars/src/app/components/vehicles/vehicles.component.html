@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let vehicle of vehicles.results">
           <div class="card_book">
-            <div class="card">
+              <div class="card text-white bg-dark mb-3" style="max-width:100%">
                 <div class="card-body">
                   <div [ngSwitch]="vehicle.name">
                     <p *ngSwitchCase="'Sand Crawler'"><img src='/assets/img/vehiculos/Sand Crawler.jpg'alt="" class="films"></p>

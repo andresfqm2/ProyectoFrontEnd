@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
 // Importamos nuestras interface
-import {PeopleInterface} from '../models/people-interface';
+//import {PeopleInterface} from '../models/people-interface';
 
 @Injectable({
   providedIn: 'root'

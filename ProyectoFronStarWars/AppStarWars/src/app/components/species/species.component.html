@@ -19,11 +19,12 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let specie of species.results">
           <div class="card_book">
-            <div class="card">
+              <div class="card text-white bg-dark mb-3" style="max-width:100%">
                 <div class="card-body">
                     
                     <div [ngSwitch]="specie.name">
                         <p *ngSwitchCase="'Hutt'"><img src='/assets/img/species/Hutt.jpg'alt="" class="films"></p>
+                        <p *ngSwitchCase="'Yoda\'s species'"><img src='/assets/img/species/Yodas_species.jpg'alt="" class="films"></p>
                         <p *ngSwitchCase="'Trandoshan'"><img src='/assets/img/species/Trandoshan.jpg'alt="" class="films"></p>
                         <p *ngSwitchCase="'Mon Calamari'"><img src='/assets/img/species/MonCalamari.jpg'alt="" class="films"></p>
                         <p *ngSwitchCase="'Ewok'"><img src='/assets/img/species/Ewok.jpg'alt="" class="films"></p>

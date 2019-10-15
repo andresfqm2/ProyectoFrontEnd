@@ -12,17 +12,16 @@
   
 </div>
 
-<section id="films">
-  <div class="container">
+<section id="films">  
+  <div class="container">     
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let film of films.results">
-        <div class="card_book">
-          <div class="card">
+        <div class="card_book">            
+            <div class="card text-white bg-dark mb-3" style="max-width:100%">
               <div class="card-body">
                     <!--<img src="/assets/imagFilms/Films1.jpg" alt="" class="Films">
                     <img src="/assets/imagFilms/Films2.jpg" alt="" class="Films">-->
-
-                    <div [ngSwitch]="film.title">
+                    <div [ngSwitch]="film.title" >
                       <p *ngSwitchCase="'A New Hope'"><img src="/assets/imagFilms/Films1.jpg" alt="" class="films"></p>
                       <p *ngSwitchCase="'Attack of the Clones'"><img src="/assets/imagFilms/Films2.jpg" alt="" class="films"></p>
                       <p *ngSwitchCase="'The Phantom Menace'"><img src="/assets/imagFilms/Films3.jpg" alt="" class="films"></p>
@@ -37,7 +36,7 @@
                   </p>-->
                   <a routerLink="/films/{{film.episode_id}}" class="btn btn-primary">Ver descripción</a>
                 </div>
-          </div>
+            </div>
         </div>
       </div>
     </div>

@@ -13,7 +13,9 @@ import { PeopleInterface } from 'src/app/models/people-interface';
 export class FilmsComponent implements OnInit {
 
   constructor(private dataApi: DataApiService, private route: ActivatedRoute) { }
-  private peopleFilms: PeopleInterface ={
+
+  private people: PeopleInterface;
+  /*private peopleFilms: PeopleInterface ={
     name: '',
     height: '',
     mass: '',
@@ -22,7 +24,7 @@ export class FilmsComponent implements OnInit {
     eye_color: '',
     birth_year: '',
     gender: ''
-  };
+  };*/
   private films: FilmInterface = {
     title : '',
     episode_id: '',
@@ -63,20 +65,20 @@ export class FilmsComponent implements OnInit {
 
   getDetailsFilms(episode_id: string){
     this.dataApi.getFilmById(episode_id).subscribe(films => (this.films = films));
-    let characters: any[] = [this.dataApi.getFilmById(episode_id).subscribe(films =>console.log(films))];
+   // let characters: any[] = [this.dataApi.getFilmById(episode_id).subscribe(films =>console.log(films))];
    
-    console.log(characters);
+    //console.log(characters);
 
     //this.getListPeoplesForFilms("https://swapi.co/api/people/3");
      // this.dataApi.getCharactersForFilms(url).subscribe(people => console.log(people));
   }
 
   getListPeoples() {
-    //this.dataApi.getAllPeople().subscribe((peoples: PeopleInterface)=>(this.people = peoples)) ;
+    this.dataApi.getAllPeople().subscribe((peoples: PeopleInterface)=>(this.people = peoples)) ;
   }
 
   getListPeoplesForFilms(name: string){
-    this.dataApi.getCharactersForFilms(name).subscribe(peopleFilms => (this.peopleFilms = peopleFilms));
+   // this.dataApi.getCharactersForFilms(name).subscribe(peopleFilms => (this.peopleFilms = peopleFilms));
 
   }
 

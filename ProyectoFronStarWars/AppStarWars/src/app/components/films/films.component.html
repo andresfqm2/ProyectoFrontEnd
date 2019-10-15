@@ -1,18 +1,20 @@
-<div class="jumbotron">
-    <h2 class="display-4">App of Star Wars!</h2>
-    <p class="lead">Wellcome to the fun!!!</p>  
-    <hr class="my-4">
-    <p>Are you a Star Wars fan? We want to please you, this will be your place to meet</p> 
-    <p>This is the summary information you want to know about the movie</p>
-    <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
-  </div>
-  
+
+    <div class="jumbotron">        
+        <h2 class="display-4">App of Star Wars!</h2>
+        <p class="lead">Wellcome to the fun!!!</p>  
+        <hr class="my-4">
+        <p>Are you a Star Wars fan? We want to please you, this will be your place to meet</p> 
+        <p>This is the summary information you want to know about the movie</p>
+        <!--<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>-->
+      </div>
+
 <section id="films">
+  
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4" >
           <div class="card_book">
-            <div class="card">
+              <div class="card text-white bg-secondary mb-3" style="max-width:100%">
                 <div class="card-body">                   
                     <h4>{{films.title}}</h4>
                     <p class="card-text">Producer: {{films.producer}}</p>
@@ -25,12 +27,13 @@
         </div> 
         <div class="card-body">
           <h4>Characters:</h4>
-          <ol>
-              <li>{{peopleFilms.name}} </li>
+          <ol >
+            <li  *ngFor="let film of films.characters">{{film}} </li>
           </ol>
         </div>       
       </div>
     </div>
+  
   </section>
   
   

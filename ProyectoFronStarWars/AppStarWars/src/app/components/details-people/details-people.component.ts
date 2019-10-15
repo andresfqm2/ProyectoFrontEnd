@@ -33,8 +33,7 @@ export class DetailsPeopleComponent implements OnInit {
     this.dataApi.getAllPeople().subscribe((people: PeopleInterface) => (this.people = people));
   }
 
-  getPeopleForFilms(url: string){
-    // this.dataApi.getCharactersForFilms(url).subscribe(people => console.log(people));
+  getPeopleForFilms(url: string){   
     this.dataApi.getCharactersForFilms(url).subscribe(people => console.log(people));
   }
 
