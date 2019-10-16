@@ -11,6 +11,7 @@ export class StarshipsComponent implements OnInit {
 
   constructor(private dataApi: DataApiService) { }
 
+  filterStartships = '';
   private starShips: starshipsInterface ={
     name: '',
     model: '',

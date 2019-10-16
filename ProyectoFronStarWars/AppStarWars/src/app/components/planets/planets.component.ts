@@ -10,6 +10,8 @@ import { PlanetsInterface } from 'src/app/models/planets-interfaces';
 export class PlanetsComponent implements OnInit {
 
   constructor(private dataApi: DataApiService) { }
+
+  filterPlanets = '';
   private planets: PlanetsInterface = {
     name: '',
     rotation_period: '',
