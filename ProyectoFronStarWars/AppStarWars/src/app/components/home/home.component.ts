@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private dataApi: DataApiService) { }
   private films: FilmInterface;
-  
+  filterFilms = '';
 
   ngOnInit() {    
     this.getListFilms();

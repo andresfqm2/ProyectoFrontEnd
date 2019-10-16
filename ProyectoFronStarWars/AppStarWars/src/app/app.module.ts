@@ -19,6 +19,13 @@ import { StarshipsComponent } from './components/starships/starships.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ListFilmsComponent } from './components/list-films/list-films.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule} from '@angular/forms';
+import { FilterCharacterPipe } from './pipes/filter-character.pipe';
+import { FilterPlanetsPipe } from './pipes/filter-planets.pipe';
+import { FilterStartshipsPipe } from './pipes/filter-startships.pipe';
+import { FilterVehiclesPipe } from './pipes/filter-vehicles.pipe';
+import { FilterSpeciesPipe } from './pipes/filter-species.pipe';
 
 @NgModule({
   declarations: [
@@ -33,12 +40,19 @@ import { ListFilmsComponent } from './components/list-films/list-films.component
     StarshipsComponent,
     NavbarComponent,
     HeroComponent,
-    ListFilmsComponent
+    ListFilmsComponent,
+    FilterPipe,
+    FilterCharacterPipe,
+    FilterPlanetsPipe,
+    FilterStartshipsPipe,
+    FilterVehiclesPipe,
+    FilterSpeciesPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   // injectamos nuestro servicio como providers
   providers: [DataApiService],

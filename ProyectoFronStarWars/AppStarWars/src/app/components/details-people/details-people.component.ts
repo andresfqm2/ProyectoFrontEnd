@@ -12,6 +12,7 @@ export class DetailsPeopleComponent implements OnInit {
 
   constructor(private dataApi: DataApiService, private route: ActivatedRoute) { }
 
+  filterPeoples = '';
   private people: PeopleInterface = {
     name: '',
     height: '',
