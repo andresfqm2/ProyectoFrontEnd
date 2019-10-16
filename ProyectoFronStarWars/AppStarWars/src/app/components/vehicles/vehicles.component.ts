@@ -11,6 +11,7 @@ export class VehiclesComponent implements OnInit {
 
   constructor(private dataApi: DataApiService) { }
 
+  filterVehicles = '';
   private vehicles: vehiclesInterface ={
     name: '',
     model: '',

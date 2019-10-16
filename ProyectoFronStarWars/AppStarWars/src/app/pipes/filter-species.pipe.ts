@@ -5,8 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterSpeciesPipe implements PipeTransform {
 
-  transform(value: any, ...args: any[]): any {
-    return null;
-  }
-
+  transform(value: any, arg: any): any {
+    const resultSpecies = [];
+    for(const species of value){
+      if(species.name.toLowerCase().indexOf(arg.toLowerCase()) > -1){
+        resultSpecies.push(species);
+ 
+      };
+ 
+    };
+    return resultSpecies;
+   }
 }

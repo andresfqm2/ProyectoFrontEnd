@@ -11,6 +11,8 @@ export class SpeciesComponent implements OnInit {
 
   constructor(private dataApi: DataApiService) { }
 
+  filterSpecies = '';
+  
   private species: SpeciesInterface ={
     name: '',
     classification: '',
